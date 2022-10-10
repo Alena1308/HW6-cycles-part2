@@ -47,7 +47,7 @@ public class Main {
         double population = 12_000_000;
         while (year < 10) {
             year++;
-            population = population + population * birthRateYear - population * mortalityYear;
+            population += population * (birthRateYear - mortalityYear);
             System.out.println("Год " + year + ", численность населения составляет " + (int)population);
         }
     }
@@ -60,8 +60,8 @@ public class Main {
         int i = 0;
         while (total < 12_000_000) {
             i++;
-            total = total + salary;
-            total = total + total * percent;
+            total += salary;
+            total += total * percent;
             System.out.printf("Месяц %d, сумма накоплений равна %.2f рублей", i, total);
             System.out.println();
         }
@@ -74,8 +74,8 @@ public class Main {
         int i = 0;
         while (total < 12_000_000) {
             i++;
-            total = total + salary;
-            total = total + total * percent;
+            total += salary;
+            total += total * percent;
             if (i % 6 == 0) {
                 System.out.printf("Месяц %d, сумма накоплений равна %.2f рублей", i, total);
                 System.out.println();
@@ -90,8 +90,8 @@ public class Main {
         int i = 0;
         while (i < 108) {
             i++;
-            total = total + salary;
-            total = total + total * percent;
+            total += salary;
+            total += total * percent;
             if (i % 6 == 0) {
                 System.out.printf("Месяц %d, сумма накоплений равна %.2f рублей", i, total);
                 System.out.println();
